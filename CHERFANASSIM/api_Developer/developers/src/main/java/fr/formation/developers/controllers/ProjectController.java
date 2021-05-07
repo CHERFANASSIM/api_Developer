@@ -59,14 +59,9 @@ public class ProjectController {
 				System.out.println(pr + " a été modifié");
 				
 			}
-		}
-		
-		
-		
+		}	
 		
 	}
-	
-	
 	@DeleteMapping("/{name}/closed")
 	public void closedByNameProject (@PathVariable String name) {
 		int index = -1;

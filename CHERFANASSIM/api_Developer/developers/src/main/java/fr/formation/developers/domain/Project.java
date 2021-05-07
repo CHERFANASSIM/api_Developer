@@ -3,6 +3,7 @@ package fr.formation.developers.domain;
 import java.time.LocalDate;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 public class Project {
@@ -15,7 +16,7 @@ public class Project {
 
 	@NotNull
 	private LocalDate startDate;
-
+    @Positive
 	private double budgetAnnual;
 
 	public Project() {
