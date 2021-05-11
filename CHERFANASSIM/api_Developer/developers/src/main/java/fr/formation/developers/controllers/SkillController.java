@@ -1,6 +1,8 @@
 package fr.formation.developers.controllers;
 
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,12 +19,17 @@ public class SkillController {
 	public Skill getById(@PathVariable("id")Long id) {
 		Skill skill = new Skill();
 		skill.setName("spring boot" + id);
+		return skill;	
+	}
+	
+	
+	
+	
+	@PostMapping("/skills")
+	public Skill create(@Valid @RequestBody  Skill skill) {
+		System.out.println(skill);
 		return skill;
 		
-	}
-	@PostMapping("/skills")
-	public void create(@RequestBody Skill skill) {
-		System.out.println(skill);
 		
 	}
 	

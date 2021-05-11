@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,7 +37,7 @@ public class DeveloperController {
 	   }
 	    
 	     @PostMapping
-	    public void create(@RequestBody Developer developer) {
+	    public void create(@Valid @RequestBody Developer developer) {
 	    	System.out.println(developer);
 	    	
 	    }

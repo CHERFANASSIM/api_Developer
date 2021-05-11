@@ -2,11 +2,16 @@ package fr.formation.developers.domain;
 
 import java.time.LocalDate;
 
+import fr.formation.developers.validation.Adult;
+
 public class Developer  {
 
 	private String pseudo;
 	private String firstName;
 	private String lastName;
+	
+	
+	@Adult
 	private LocalDate birthDate;
 
 	public Developer() {
