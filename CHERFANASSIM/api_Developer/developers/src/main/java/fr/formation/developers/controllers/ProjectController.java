@@ -3,6 +3,8 @@ package fr.formation.developers.controllers;
 import java.time.LocalDate;
 import java.util.*;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,7 +42,7 @@ public class ProjectController {
 	
 	
 	@PostMapping("/add")
-	public Project addToList(@RequestBody Project project) {
+	public Project addToList(@Valid @RequestBody Project project) {
 		listProjects.add(project);
 		System.out.println(project + " a été rajouté");
 		return project;

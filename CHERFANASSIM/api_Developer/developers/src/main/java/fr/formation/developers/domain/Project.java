@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
+import fr.formation.developers.validation.NameDescriptionEqualValidation;
+@NameDescriptionEqualValidation
 public class Project {
 
 	@Size(min = 1, max = 255)
