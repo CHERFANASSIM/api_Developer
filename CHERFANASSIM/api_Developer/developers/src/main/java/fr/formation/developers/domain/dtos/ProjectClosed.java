@@ -1,14 +1,12 @@
-package fr.formation.developers.domain;
+package fr.formation.developers.domain.dtos;
 
 import java.time.LocalDate;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Future;
 
 public class ProjectClosed extends Project {
-	
-	
 
+	@Future
 	private LocalDate dateClosed;
 
 	public ProjectClosed() {
@@ -28,8 +26,5 @@ public class ProjectClosed extends Project {
 	public String toString() {
 		return "ProjectClosed [dateClosed=" + dateClosed + ", getName()=" + getName() + "]";
 	}
-	
-	
-	
 
 }

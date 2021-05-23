@@ -1,15 +1,15 @@
-package fr.formation.developers.domain;
+package fr.formation.developers.domain.dtos;
 
 import javax.validation.constraints.NotNull;
 
 import fr.formation.developers.validation.Uppercase;
 
-public class Skill { 
+public class SkillCreate { 
 	
     @Uppercase         
 	private  String name;
 	
-	public Skill() {
+	public SkillCreate() {
 		
 	}
 

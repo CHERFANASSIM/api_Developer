@@ -1,24 +1,27 @@
-package fr.formation.developers.domain;
+package fr.formation.developers.domain.dtos;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import fr.formation.developers.validation.NameDescriptionEqualValidation;
+
 @NameDescriptionEqualValidation
 public class Project {
 
 	@Size(min = 1, max = 255)
 	private String name;
 
-	@Size(min = 100, max = 1000, message = "It must be between 100 and 1000 characters")
+	@Size(min = 1, max = 1000, message = "It must be between 100 and 1000 characters")
 	private String descrption;
 
 	@NotNull
+	@FutureOrPresent
 	private LocalDate startDate;
-    @Positive
+	@Positive
 	private double budgetAnnual;
 
 	public Project() {
@@ -26,7 +29,7 @@ public class Project {
 	}
 
 	public Project(@Size(min = 1, max = 255) String name,
-			@Size(min = 100, max = 1000, message = "It must be between 100 and 1000 characters") String descrption,
+			@Size(min = 1, max = 1000, message = "It must be between 100 and 1000 characters") String descrption,
 			@NotNull LocalDate startDate, double budgetAnnual) {
 		super();
 		this.name = name;

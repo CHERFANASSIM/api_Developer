@@ -3,7 +3,7 @@ package fr.formation.developers.validation;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import fr.formation.developers.domain.Project;
+import fr.formation.developers.domain.dtos.Project;
 
 public class NameDescriptionValidator 
 implements ConstraintValidator<NameDescriptionEqualValidation, Project> {
